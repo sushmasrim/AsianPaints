@@ -1,12 +1,13 @@
 package com.demo.AsianPaints;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -30,11 +31,12 @@ public void i_click_on_shop() throws InterruptedException {
 	Actions act = new Actions(driver);
 	act.moveToElement(driver.findElement(By.xpath("(//span[@class='iconTextLinks__text visible-in-Desktop'])[6]"))).build().perform();	
 	Thread.sleep(3000);
+	
 }
 
 @Then("I should navigate to the shop page")
 public void i_should_navigate_to_the_shop_page() {
-	 System.out.println("navigated to the shop page");
+	
 }
 
 @Given("I am on the shop page")
@@ -50,6 +52,7 @@ public void i_am_on_the_shop_page() throws InterruptedException {
 	act.moveToElement(driver.findElement(By.xpath("(//span[@class='iconTextLinks__text visible-in-Desktop'])[6]"))).click().build().perform();	
 	Thread.sleep(3000);
 }
+
 
 @When("I hover my mouse on Shop")
 public void i_hover_my_mouse_on_Shop() throws InterruptedException {
